@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+/* WeatherForecast.css */
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.forecast-item {
+  text-align: center;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.forecast-item h3 {
+  margin: 0;
+  color: #333;
+}
+
+.forecast-item p {
+  margin: 5px 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.weather-forecast {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 20px;
+  min-height: 100vh;
+  width: 100vw; /* Fits exactly the width of the viewport */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  background: linear-gradient(135deg, rgba(255, 235, 59, 0.6) 0%, rgba(255, 235, 59, 0.4) 10%, rgba(255, 235, 59, 0) 25%),
+              linear-gradient(135deg, #82ccdd, #60a3bc 25%, #95a5a6 50%, #7f8c8d 75%, #34495e);
+
+  background-size: cover, 1200% 1200%;
+  animation: cloudMovement 10s linear infinite alternate;
+}
+
+@keyframes cloudMovement {
+  0% {
+    background-position: left, 0% 0%;
+  }
+  100% {
+    background-position: left, 100% 100%;
+  }
+}
+
+.forecast-item {
+  /* Your .forecast-item styles */
+  width: 140px;
+  height: 180px;
+  flex: none;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  background-color: #545454a0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  animation: itemColorChange 30s linear infinite alternate;
+}
+
+@keyframes itemColorChange {
+  0% {
+    background-position: top left, 0% 0%;
+  }
+  100% {
+    background-position: top left, 100% 100%;
+  }
+}
+
+
+.forecast-item h3, .forecast-item p {
+  margin: 5px 0; /* Adjust margin for the text */
+  color: #ffffff; /* Set text color to dark grey */
+}
+
+
