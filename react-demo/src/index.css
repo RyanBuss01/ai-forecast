@@ -15,30 +15,6 @@ code {
 
 /* WeatherForecast.css */
 
-.weather-forecast {
-  display: flex;
-  justify-content: space-around;
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-
-.forecast-item {
-  text-align: center;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-}
-
-.forecast-item h3 {
-  margin: 0;
-  color: #333;
-}
-
-.forecast-item p {
-  margin: 5px 0;
-}
-
 body, html {
   margin: 0;
   padding: 0;
@@ -47,6 +23,7 @@ body, html {
 
 .weather-forecast {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: stretch;
   padding: 20px;
@@ -102,3 +79,21 @@ body, html {
 }
 
 
+.item-container {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  padding: 10px;
+}
+
+.forecast-heading {
+  text-align: center; /* Centers the text within */
+  width: 100%; /* Ensures the heading can properly align text in the center */
+  /* Additional styling */
+}
+
+.widgets {
+  align-self: center;
+  flex-direction: column;
+  text-align: center;
+}

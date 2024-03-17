@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './WeatherForecast.css'; // Make sure to create this CSS file
+import '../index.css'; // Make sure to create this CSS file
 
 const WeatherForecast = () => {
   const [forecast, setForecast] = useState([]);
@@ -21,14 +21,35 @@ const WeatherForecast = () => {
 
   return (
     <div className="weather-forecast">
+        <div className="widgets">
+        <h1 style={{color: 'white'}}>Weather Forecast</h1>
+
+        <div className="item-container">
       {forecast.map((dayForecast, index) => (
         <div className="forecast-item" key={index}>
           <h3>{dayForecast.day}</h3>
           <p>High: {dayForecast.high}°F</p>
           <p>Low: {dayForecast.low}°F</p>
-          <p>{dayForecast.condition}</p>
         </div>
       ))}
+      </div>
+
+      <div>
+        <button className="button">Click me</button>
+      </div>
+
+        <div className="item-container">
+      {forecast.map((dayForecast, index) => (
+        <div className="forecast-item" key={index}>
+          <h3>{dayForecast.day}</h3>
+          <p>High: {dayForecast.high}°F</p>
+          <p>Low: {dayForecast.low}°F</p>
+        </div>
+      ))}
+      </div>
+
+
+      </div>
     </div>
   );
 };
