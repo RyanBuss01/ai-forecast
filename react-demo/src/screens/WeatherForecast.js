@@ -3,6 +3,7 @@ import '../index.css'; // Make sure to create this CSS file
 import dataHandler from '../services/dataHandler';
 
 const WeatherForecast = () => {
+  let data = dataHandler.getData();
   const [forecast, setForecast] = useState([]);
 
   useEffect(() => {
@@ -17,9 +18,12 @@ const WeatherForecast = () => {
       { day: 'Saturday', high: 72, low: 54, condition: 'Sunny' },
       { day: 'Sunday', high: 75, low: 56, condition: 'Sunny' },
     ];
-    let data = dataHandler.getData();
     setForecast(mockData);
   }, []);
+
+  const buttonClick = () => {
+    console.log(data);
+  }
 
   return (
     <div className="weather-forecast">
@@ -37,7 +41,7 @@ const WeatherForecast = () => {
       </div>
 
       <div>
-        <button className="button">Click me</button>
+        <button onClick={buttonClick} className="button">Click me</button>
       </div>
 
         <div className="item-container">
