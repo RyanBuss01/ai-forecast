@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import '../index.css'; // Make sure to create this CSS file
+import dataHandler from '../services/dataHandler';
 
 const WeatherForecast = () => {
   const [forecast, setForecast] = useState([]);
@@ -16,6 +17,7 @@ const WeatherForecast = () => {
       { day: 'Saturday', high: 72, low: 54, condition: 'Sunny' },
       { day: 'Sunday', high: 75, low: 56, condition: 'Sunny' },
     ];
+    let data = dataHandler.getData();
     setForecast(mockData);
   }, []);
 
