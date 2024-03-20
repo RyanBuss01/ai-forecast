@@ -9,8 +9,8 @@ const WeatherForecast = () => {
 
   useEffect(() => {
     dataHandler.getData().then((res) => {
-      setFullData(res);
-      const formattedForecast = res.map((item, index) => {
+      setFullData(res.full);
+      const formattedForecast = res.split.map((item, index) => {
         const maxTemp = Math.max(...item); // Spread operator to find max
         const minTemp = Math.min(...item); // Spread operator to find min
         const dayNames = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
@@ -25,7 +25,7 @@ const WeatherForecast = () => {
   }, []);
 
   const buttonClick = () => {
-    modelHandler.forecast(fullData);
+    modelHandler.forecast();
   }
 
   return (

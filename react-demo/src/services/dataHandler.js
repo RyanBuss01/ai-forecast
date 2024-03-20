@@ -50,7 +50,7 @@ const dataHandler = {
         splitDataByDay.push(lastWeekData.slice(i * dataPointsPerDay, (i + 1) * dataPointsPerDay));
     }
 
-    return splitDataByDay;
+    return {split: splitDataByDay, full: data};
   },
 
   
