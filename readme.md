@@ -3,5 +3,7 @@
 model conversion
 
 ```
-tensorflowjs_converter --input_format=tf_saved_model src/model/tempModel public/model
+cd react-demo
+
+tensorflowjs_converter --input_format keras data/model/h5/model.h5 react-demo/public/model
 ```

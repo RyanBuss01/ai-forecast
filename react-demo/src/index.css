@@ -14,14 +14,32 @@ code {
 
 
 /* WeatherForecast.css */
-
 body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-x: hidden;
+  height: 100%;
+
 }
 
 .weather-forecast {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1; /* Ensure it's behind the content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, rgba(255, 235, 59, 0.6) 0%, rgba(255, 235, 59, 0.4) 10%, rgba(255, 235, 59, 0) 25%),
+              linear-gradient(135deg, #82ccdd, #60a3bc 25%, #95a5a6 50%, #7f8c8d 75%, #34495e);
+  background-size: cover, 1200% 1200%;
+  animation: cloudMovement 30s linear infinite alternate;
+  background-attachment: fixed;
+}
+
+.widgets-container {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -30,11 +48,8 @@ body, html {
   min-height: 100vh;
   width: 100vw; /* Fits exactly the width of the viewport */
   overflow-x: hidden; /* Prevent horizontal scrolling */
-  background: linear-gradient(135deg, rgba(255, 235, 59, 0.6) 0%, rgba(255, 235, 59, 0.4) 10%, rgba(255, 235, 59, 0) 25%),
-              linear-gradient(135deg, #82ccdd, #60a3bc 25%, #95a5a6 50%, #7f8c8d 75%, #34495e);
 
   background-size: cover, 1200% 1200%;
-  animation: cloudMovement 10s linear infinite alternate;
 }
 
 @keyframes cloudMovement {
@@ -96,4 +111,12 @@ body, html {
   align-self: center;
   flex-direction: column;
   text-align: center;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.loading-container {
+  color: #ffffff;
 }

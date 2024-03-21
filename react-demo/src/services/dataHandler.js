@@ -53,6 +53,12 @@ const dataHandler = {
     return {split: splitDataByDay, full: data};
   },
 
+  fahrenheitConvert: (celsius) => {
+    let fahrenheit = celsius * 9/5 + 32;
+    const num = Number(fahrenheit.toFixed(2));
+    return num
+  }
+
   
 };
 
