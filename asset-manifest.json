@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ai-forecast/static/css/main.70f306dd.css",
+    "main.js": "/ai-forecast/static/js/main.77bc1775.js",
+    "index.html": "/ai-forecast/index.html",
+    "main.70f306dd.css.map": "/ai-forecast/static/css/main.70f306dd.css.map",
+    "main.77bc1775.js.map": "/ai-forecast/static/js/main.77bc1775.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.70f306dd.css",
+    "static/js/main.77bc1775.js"
+  ]
+}
