@@ -13,7 +13,7 @@ const modelHandler = {
         transform: (data) => data.map(d => (d - X_min) / (X_max - X_min)), // Scales each value to [0, 1]
         inverseTransform: (data) => data.map(d => d * (X_max - X_min) + X_min), // Reverses the scaling
     };
-    const model = await tf.loadLayersModel('/model/model.json');
+    const model = await tf.loadLayersModel('/ai-forecast/model/model.json');
 
     let windowData = data.slice(data.length - windowSize); // Last 7 days of hourly data
     let latestData = tf.tensor3d(scaler.transform(windowData), [1, windowSize, 1]);
